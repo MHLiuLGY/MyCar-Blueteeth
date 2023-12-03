@@ -686,21 +686,6 @@
           <GroupName>Hardware</GroupName>
           <Files>
             <File>
-              <FileName>OLED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hardware\OLED.c</FilePath>
-            </File>
-            <File>
-              <FileName>OLED.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\OLED.h</FilePath>
-            </File>
-            <File>
-              <FileName>OLED_Font.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\OLED_Font.h</FilePath>
-            </File>
-            <File>
               <FileName>Motor.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\Motor.c</FilePath>
@@ -739,16 +724,6 @@
               <FileName>HCSR04.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\HCSR04.h</FilePath>
-            </File>
-            <File>
-              <FileName>OLEDI2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Hardware\OLEDI2C.c</FilePath>
-            </File>
-            <File>
-              <FileName>OLEDI2C.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Hardware\OLEDI2C.h</FilePath>
             </File>
             <File>
               <FileName>MPU6050.c</FileName>
@@ -804,6 +779,26 @@
               <FileName>IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Hardware\IMU.h</FilePath>
+            </File>
+            <File>
+              <FileName>HC05.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\HC05.c</FilePath>
+            </File>
+            <File>
+              <FileName>HC05.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\HC05.h</FilePath>
+            </File>
+            <File>
+              <FileName>Serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\Serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>Serial.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\Serial.h</FilePath>
             </File>
           </Files>
         </Group>
