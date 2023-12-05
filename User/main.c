@@ -179,8 +179,8 @@ int main(){
         Distance1=HCSR04_GetDistance1();
         Distance2=HCSR04_GetDistance2();
         for (int i = 0; i < 3; i ++){
-            MyCar_Status[0][2+i]=(Distance1 / main_Pow(10, 3 - i - 1) % 10 + '0');
-            MyCar_Status[1][2+i]=(Distance2 / main_Pow(10, 3 - i - 1) % 10 + '0');
+            MyCar_Status[0][2+i]=(Distance1/100 / main_Pow(10, 3 - i - 1) % 10 + '0');
+            MyCar_Status[1][2+i]=(Distance2/100 / main_Pow(10, 3 - i - 1) % 10 + '0');
         }
         if(ObstAvoModeFlag){//仅当避障模式时才执行下列逻辑
             if(Distance1/100<Thre_Dist && Distance2/100>Thre_Dist)
@@ -371,9 +371,15 @@ int main(){
         
         /*MPU6050*/
         MPU6050_GetData(&Data);
-        for (int i = 0; i < 5; i ++){
-            MyCar_Status[5][6+i]=(Data.AccY / main_Pow(10, 5 - i - 1) % 10 + '0');
+        if(Data.AccY<0){
+            MyCar_Status[5][6]='-';
+            Data.AccY=-Data.AccY;
+        }else{
+            MyCar_Status[5][6]='+';
         }
+        for (int i = 0; i < 5; i ++){
+            MyCar_Status[5][7+i]=(Data.AccY / main_Pow(10, 5 - i - 1) % 10 + '0');
+        }//单位：2g/32767
     }
 }
 
